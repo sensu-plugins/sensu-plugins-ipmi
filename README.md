@@ -1,6 +1,6 @@
 ## Sensu-Plugins-ipmi
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-ipmi.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-ipmi)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-ipmi.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-ipmi)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-ipmi.svg)](http://badge.fury.io/rb/sensu-plugins-ipmi)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-ipmi/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-ipmi)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-ipmi/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-ipmi)
