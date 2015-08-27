@@ -108,7 +108,7 @@ class CheckSensor < Sensu::Plugin::Metric::CLI::Graphite
 
   def run
     # #YELLOW
-    conn.sensors.list.each do |sensor| # rubocop:disable Style/Next
+    conn.sensors.list.each do |sensor|
       if config[:sensor] != 'all'
         next if sensor[1][:name] != config[:sensor]
       end
