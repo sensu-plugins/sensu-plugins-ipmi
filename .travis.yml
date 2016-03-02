@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-impi.gemspec
+- gem install sensu-plugins-impi-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: CBBilRGlgZ13O0fL9/uXipD81pmkYapDY2xlRAmRzKM2CJU0RxsxaK2756mq6oWp2MbBd4/AfIhzEgKnl+cv9q1/wa6uefKTWf7wnY5cdMiPxsUZaw3gBIBiPmf8CL0nvXtjM8Hx6xMW+2Lly72uKddw/T277RAwEGb/RGU6OyM=
+  gem: sensu-plugins-ipmi
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-ipmi
