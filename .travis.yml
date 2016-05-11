@@ -16,8 +16,8 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
-- gem build sensu-plugins-impi.gemspec
-- gem install sensu-plugins-impi-*.gem
+- gem build sensu-plugins-ipmi.gemspec
+- gem install sensu-plugins-ipmi-*.gem
 deploy:
   provider: rubygems
   api_key:
