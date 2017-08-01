@@ -2,12 +2,10 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'date'
-
 require_relative 'lib/sensu-plugins-ipmi'
 
 Gem::Specification.new do |s|
   s.authors                = ['Sensu-Plugins and contributors']
-  # s.cert_chain             = ['certs/sensu-plugins.pem']
   s.date                   = Date.today.to_s
   s.description            = 'Sensu ipmi plugins'
   s.email                  = '<sensu-users@googlegroups.com>'
@@ -29,7 +27,7 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsIpmi::Version::VER_STRING
 
-  s.add_runtime_dependency 'sensu-plugin',  '1.2.0'
+  s.add_runtime_dependency 'sensu-plugin',  '~> 1.2'
   s.add_runtime_dependency 'rubyipmi',      '0.10.0'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
