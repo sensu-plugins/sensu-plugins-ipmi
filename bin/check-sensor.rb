@@ -93,7 +93,7 @@ class CheckSensor < Sensu::Plugin::Metric::CLI::Graphite
          default: 30
 
   def conn
-    timeout(config[:timeout].to_i) do
+    Timeout.timeout(config[:timeout].to_i) do
       Rubyipmi.connect(config[:username],
                        config[:password],
                        config[:host],
