@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+
+## [1.0.1] - 2017-08-07
 ### Changed
 - Change `sensu-plugin` dependency to `~> 1.2` (@eheydrick)
+
+### Fixed
+- Fix deprecated timeout method (@peterhoeg)
 
 ## [1.0.0] - 2017-07-12
 ### Added
@@ -22,6 +27,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-ipmi/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-ipmi/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/sensu-plugins/sensu-plugins-ipmi/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-ipmi/compare/0.0.2...1.0.0
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-ipmi/compare/0.0.1...0.0.2
