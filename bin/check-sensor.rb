@@ -86,6 +86,12 @@ class CheckSensor < Sensu::Plugin::Metric::CLI::Graphite
          long: '--ipmitool IPMI_PROVIDER',
          default: 'ipmitool'
 
+  option :driver,
+         description: 'IPMI Tool Driver: auto, lan15, lan20, open (defaults to lan20)',
+         short: '-d IPMI_DRIVER',
+         long: '--driver IPMI_DRIVER',
+         default: 'lan20'
+
   option :timeout,
          description: 'IPMI connection timeout in seconds (defaults to 30)',
          short: '-t TIMEOUT',
@@ -98,6 +104,7 @@ class CheckSensor < Sensu::Plugin::Metric::CLI::Graphite
                        config[:password],
                        config[:host],
                        config[:provider],
+                       driver: config[:driver],
                        privilege: config[:privilege])
     end
   rescue Timeout::Error
