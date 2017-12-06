@@ -84,13 +84,15 @@ class CheckSensor < Sensu::Plugin::Metric::CLI::Graphite
          description: 'IPMI Tool Provider (ipmitool OR freeipmi).  Default is ipmitool.',
          short: '-i IPMI_PROVIDER',
          long: '--ipmitool IPMI_PROVIDER',
-         default: 'ipmitool'
+         default: 'ipmitool',
+         in: %w(freeipmi ipmitool)
 
   option :driver,
          description: 'IPMI Tool Driver: auto, lan15, lan20, open (defaults to lan20)',
          short: '-d IPMI_DRIVER',
          long: '--driver IPMI_DRIVER',
-         default: 'lan20'
+         default: 'lan20',
+         in: %w(auto lan15 lan20 open)
 
   option :timeout,
          description: 'IPMI connection timeout in seconds (defaults to 30)',
