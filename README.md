@@ -8,6 +8,8 @@
 
 ## Functionality
 
+By default when using `ipmitool` to connect, we default to using the `lan20` driver for IPMI v2 hosts which will not work with older (IPMI v1.5+) hosts. Instead of specifying the driver for each host, you can try setting it to `auto`.
+
 ## Files
  * bin/check-sensor.rb
 

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Added
+- The underlying rubyipmi gem supports setting the driver used for the connection so we expose that via the `---driver` argument (@peterhoeg)
+- Updated the README with possible fixes when talking to older (< v2) IPMI hosts (@peterhoeg)
 
 ## [1.0.1] - 2017-08-07
 ### Changed
